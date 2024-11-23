@@ -1,0 +1,254 @@
+.medication-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.medication-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.medication-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.medication-toolbar {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+  background: #f8f9fa;
+  flex-wrap: wrap;
+}
+
+.medication-content {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.medication-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #2196f3;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+.medication-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.medication-table th,
+.medication-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.medication-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.medication-table tr:hover {
+  background: #f5f5f5;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.status-scheduled {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-administered {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-missed {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.status-held {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.action-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.add-button {
+  background: #28a745;
+  color: white;
+}
+
+.add-button:hover {
+  background: #218838;
+}
+
+.clear-button {
+  background: #6c757d;
+  color: white;
+}
+
+.clear-button:hover {
+  background: #5a6268;
+}
+
+.delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.medication-container:hover .delete-button {
+  opacity: 1;
+}
+
+.delete-button:hover {
+  background: #c82333;
+}
+
+.time-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #e9ecef;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #495057;
+  margin-right: 5px;
+}
+
+.medication-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.medication-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.medication-details {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.notes-field {
+  grid-column: 1 / -1;
+}
+
+.notes-field textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.notes-field textarea:focus {
+  border-color: #2196f3;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+@media (max-width: 768px) {
+  .medication-form {
+    grid-template-columns: 1fr;
+  }
+
+  .medication-toolbar {
+    flex-direction: column;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .medication-table th,
+  .medication-table td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+}
