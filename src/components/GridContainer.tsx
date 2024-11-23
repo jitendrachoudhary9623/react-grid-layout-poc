@@ -100,11 +100,11 @@ const GridContainer: React.FC<GridContainerProps> = ({
     <GridLayout
       className={`layout ${isEditMode ? 'edit-mode' : 'use-mode'}`}
       layout={layouts.filter(item => visibleItems.includes(item.i))}
-      cols={12}
+      cols={15}
       rowHeight={80}
       width={containerWidth}
-      margin={[15, 15]}
-      containerPadding={[15, 15]}
+      margin={[0, 0]}
+      containerPadding={[0, 0]}
       isDraggable={isEditMode}
       isResizable={isEditMode}
       onLayoutChange={onLayoutChange}
