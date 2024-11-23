@@ -2,16 +2,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 1px solid #000;
   overflow: hidden;
   position: relative;
+  font-family: 'Times New Roman', serif;
 }
 
 .medication-header {
   padding: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,16 +19,16 @@
 
 .medication-title {
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: normal;
+  color: #000;
 }
 
 .medication-toolbar {
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000;
   display: flex;
   gap: 10px;
-  background: #f8f9fa;
+  background: #fff;
   flex-wrap: wrap;
 }
 
@@ -43,6 +43,8 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
   margin-bottom: 20px;
+  border: 1px solid #000;
+  padding: 15px;
 }
 
 .input-group {
@@ -53,78 +55,80 @@
 
 .input-group label {
   font-size: 0.9rem;
-  color: #666;
-  font-weight: 500;
+  color: #000;
+  font-weight: normal;
+  font-family: 'Times New Roman', serif;
 }
 
 .input-group input,
 .input-group select {
   padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #000;
   font-size: 0.9rem;
-  transition: border-color 0.2s ease;
+  background: #fff;
+  font-family: 'Times New Roman', serif;
 }
 
 .input-group input:focus,
 .input-group select:focus {
-  border-color: #2196f3;
+  border-color: #000;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
 }
 
 .medication-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 15px;
+  border: 1px solid #000;
 }
 
 .medication-table th,
 .medication-table td {
   padding: 10px;
   text-align: left;
-  border-bottom: 1px solid #eee;
+  border: 1px solid #000;
   font-size: 0.9rem;
+  color: #000;
 }
 
 .medication-table th {
-  background: #f8f9fa;
-  font-weight: 600;
+  background: #fff;
+  font-weight: normal;
   position: sticky;
   top: 0;
   z-index: 1;
+  border-bottom: 2px solid #000;
 }
 
 .medication-table tr:hover {
-  background: #f5f5f5;
+  background: #f8f8f8;
 }
 
 .status-badge {
   padding: 4px 8px;
-  border-radius: 12px;
+  border: 1px solid #000;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: normal;
   text-align: center;
+  background: #fff;
+  color: #000;
 }
 
 .status-scheduled {
-  background: #e3f2fd;
-  color: #1976d2;
+  border-style: dashed;
 }
 
 .status-administered {
-  background: #e8f5e9;
-  color: #2e7d32;
+  border-style: solid;
+  text-decoration: underline;
 }
 
 .status-missed {
-  background: #ffebee;
-  color: #c62828;
+  border-style: double;
 }
 
 .status-held {
-  background: #fff3e0;
-  color: #e65100;
+  border-style: dotted;
 }
 
 .action-buttons {
@@ -135,32 +139,24 @@
 
 .action-button {
   padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid #000;
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  font-weight: normal;
   display: flex;
   align-items: center;
   gap: 5px;
+  background: #fff;
+  color: #000;
+  font-family: 'Times New Roman', serif;
 }
 
-.add-button {
-  background: #28a745;
-  color: white;
+.add-button, .clear-button {
+  background: #fff;
+  color: #000;
 }
 
-.add-button:hover {
-  background: #218838;
-}
-
-.clear-button {
-  background: #6c757d;
-  color: white;
-}
-
-.clear-button:hover {
-  background: #5a6268;
+.add-button:hover, .clear-button:hover {
+  background: #f0f0f0;
 }
 
 .delete-button {
@@ -168,14 +164,14 @@
   top: 10px;
   right: 10px;
   padding: 5px 10px;
-  background: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.2s ease;
   z-index: 10;
+  font-family: 'Times New Roman', serif;
 }
 
 .medication-container:hover .delete-button {
@@ -183,17 +179,17 @@
 }
 
 .delete-button:hover {
-  background: #c82333;
+  background: #f0f0f0;
 }
 
 .time-badge {
   display: inline-block;
   padding: 2px 6px;
-  background: #e9ecef;
-  border-radius: 4px;
+  border: 1px solid #000;
   font-size: 0.85rem;
-  color: #495057;
+  color: #000;
   margin-right: 5px;
+  background: #fff;
 }
 
 .medication-info {
@@ -203,13 +199,14 @@
 }
 
 .medication-name {
-  font-weight: 500;
-  color: #333;
+  font-weight: normal;
+  color: #000;
+  text-decoration: underline;
 }
 
 .medication-details {
   font-size: 0.85rem;
-  color: #666;
+  color: #000;
 }
 
 .notes-field {
@@ -219,18 +216,33 @@
 .notes-field textarea {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #000;
   resize: vertical;
   min-height: 80px;
-  font-family: inherit;
+  font-family: 'Times New Roman', serif;
   font-size: 0.9rem;
+  background: #fff;
 }
 
 .notes-field textarea:focus {
-  border-color: #2196f3;
+  border-color: #000;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 1px solid #000;
 }
 
 @media (max-width: 768px) {

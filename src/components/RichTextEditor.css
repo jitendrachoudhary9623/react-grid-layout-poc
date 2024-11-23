@@ -2,15 +2,15 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 1px solid #000;
   overflow: hidden;
+  font-family: 'Times New Roman', serif;
 }
 
 .editor-header {
   padding: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,38 +18,36 @@
 
 .editor-title {
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: normal;
+  color: #000;
 }
 
 .editor-toolbar {
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000;
   display: flex;
   gap: 10px;
-  background: #f8f9fa;
+  background: #fff;
 }
 
 .toolbar-button {
   padding: 6px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: white;
+  border: 1px solid #000;
+  background: #fff;
   cursor: pointer;
   font-size: 0.9rem;
-  color: #555;
-  transition: all 0.2s ease;
+  color: #000;
+  font-family: 'Times New Roman', serif;
 }
 
 .toolbar-button:hover {
-  background: #f0f0f0;
-  border-color: #ccc;
+  background: #f8f8f8;
 }
 
 .toolbar-button.active {
-  background: #e3f2fd;
-  border-color: #2196f3;
-  color: #1976d2;
+  background: #f0f0f0;
+  border-color: #000;
+  color: #000;
 }
 
 .editor-content {
@@ -63,15 +61,15 @@
   outline: none;
   min-height: 200px;
   padding: 10px;
-  border: 1px solid #eee;
-  border-radius: 4px;
+  border: 1px solid #000;
   font-size: 0.95rem;
   line-height: 1.5;
+  font-family: 'Times New Roman', serif;
 }
 
 .editor-content [contenteditable="true"]:focus {
-  border-color: #2196f3;
-  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+  border-color: #000;
+  background-color: #fff;
 }
 
 .delete-button {
@@ -79,13 +77,13 @@
   top: 10px;
   right: 10px;
   padding: 5px 10px;
-  background: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.2s ease;
+  font-family: 'Times New Roman', serif;
 }
 
 .editor-container:hover .delete-button {
@@ -93,5 +91,5 @@
 }
 
 .delete-button:hover {
-  background: #c82333;
+  background: #f0f0f0;
 }

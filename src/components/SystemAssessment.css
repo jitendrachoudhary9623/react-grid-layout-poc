@@ -1,11 +1,11 @@
 .assessment-card {
   height: 100%;
   padding: 15px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 1px solid #000;
   display: flex;
   flex-direction: column;
+  font-family: 'Times New Roman', serif;
 }
 
 .assessment-header {
@@ -14,54 +14,84 @@
   align-items: center;
   margin-bottom: 15px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000;
 }
 
 .assessment-title {
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: normal;
+  color: #000;
 }
 
 .assessment-content {
   flex: 1;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #888 #f1f1f1;
+  scrollbar-color: #000 #fff;
 }
 
 .assessment-item {
   padding: 8px;
   margin-bottom: 8px;
-  border-radius: 4px;
-  background: #f8f9fa;
+  border: 1px solid #000;
+  background: #fff;
   font-size: 0.9rem;
+  color: #000;
 }
 
 .assessment-item:last-child {
   margin-bottom: 0;
 }
 
-/* Status Indicators */
+/* Status Indicators using border styles instead of colors */
 .status-normal {
-  border-left: 4px solid #28a745;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .status-warning {
-  border-left: 4px solid #ffc107;
+  border-style: dashed;
+  border-width: 1px;
 }
 
 .status-alert {
-  border-left: 4px solid #dc3545;
+  border-style: double;
+  border-width: 3px;
 }
 
-/* Checkmark and X styles */
+/* Checkmark and X styles in black */
 .assessment-item[data-status="✓"] {
-  color: #28a745;
+  color: #000;
+}
+
+.assessment-item[data-status="✓"]::before {
+  content: "✓";
+  margin-right: 8px;
 }
 
 .assessment-item[data-status="✗"] {
-  color: #dc3545;
+  color: #000;
+}
+
+.assessment-item[data-status="✗"]::before {
+  content: "✗";
+  margin-right: 8px;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 1px solid #000;
 }
 
 @media (max-width: 768px) {

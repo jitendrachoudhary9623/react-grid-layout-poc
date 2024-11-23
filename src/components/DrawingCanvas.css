@@ -2,16 +2,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 1px solid #000;
   overflow: hidden;
   position: relative;
+  font-family: 'Times New Roman', serif;
 }
 
 .canvas-header {
   padding: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,58 +19,56 @@
 
 .canvas-title {
   font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: normal;
+  color: #000;
 }
 
 .canvas-toolbar {
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000;
   display: flex;
   gap: 10px;
-  background: #f8f9fa;
+  background: #fff;
   flex-wrap: wrap;
 }
 
 .tool-button {
   padding: 6px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: white;
+  border: 1px solid #000;
+  background: #fff;
   cursor: pointer;
   font-size: 0.9rem;
-  color: #555;
+  color: #000;
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: all 0.2s ease;
+  font-family: 'Times New Roman', serif;
 }
 
 .tool-button:hover {
-  background: #f0f0f0;
-  border-color: #ccc;
+  background: #f8f8f8;
 }
 
 .tool-button.active {
-  background: #e3f2fd;
-  border-color: #2196f3;
-  color: #1976d2;
+  background: #f0f0f0;
+  border-color: #000;
+  color: #000;
 }
 
 .color-picker {
   width: 30px;
   height: 30px;
   padding: 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #000;
   cursor: pointer;
+  background: #fff;
 }
 
 .brush-size {
   width: 80px;
   padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #000;
+  font-family: 'Times New Roman', serif;
 }
 
 .canvas-area {
@@ -78,6 +76,8 @@
   position: relative;
   background: #fff;
   cursor: crosshair;
+  border: 1px solid #000;
+  margin: 10px;
 }
 
 canvas {
@@ -87,6 +87,7 @@ canvas {
   width: 100%;
   height: 100%;
   touch-action: none;
+  background: #fff;
 }
 
 .delete-button {
@@ -94,14 +95,14 @@ canvas {
   top: 10px;
   right: 10px;
   padding: 5px 10px;
-  background: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 4px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.2s ease;
   z-index: 10;
+  font-family: 'Times New Roman', serif;
 }
 
 .canvas-container:hover .delete-button {
@@ -109,41 +110,43 @@ canvas {
 }
 
 .delete-button:hover {
-  background: #c82333;
+  background: #f0f0f0;
 }
 
 .action-buttons {
   padding: 10px;
   display: flex;
   gap: 10px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #000;
+  background: #fff;
 }
 
 .action-button {
   padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid #000;
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  font-weight: normal;
+  background: #fff;
+  color: #000;
+  font-family: 'Times New Roman', serif;
 }
 
 .save-button {
-  background: #28a745;
-  color: white;
+  background: #fff;
+  color: #000;
 }
 
 .save-button:hover {
-  background: #218838;
+  background: #f0f0f0;
 }
 
 .clear-button {
-  background: #6c757d;
-  color: white;
+  background: #fff;
+  color: #000;
 }
 
 .clear-button:hover {
-  background: #5a6268;
+  background: #f0f0f0;
 }
 
 @media (max-width: 768px) {
